@@ -1,0 +1,20 @@
+<p id='github-link'><a href='https://github.com/coped/sinatra-hangman'>Github Repository</a></p>
+<form action='/'>
+    <input type='submit' value='New Word' />
+</form>
+
+<h1><%= header %></h1>
+<h2>Lives left: <%= lives_left %></h2>
+<h2><%= 'Incorrect guesses:' unless incorrect_guesses.empty? %>
+<%= incorrect_guesses unless incorrect_guesses.empty? %></h2>
+
+<img src=<%= hangman %> />
+
+<h1><%= word_progress %></h1>
+<p><%= word_reveal if over %></p>
+<%= if !over
+"<form>
+    <input type='text' name='guess' size='3' maxlength='1' required='true' />
+    <input type='submit' value='Guess!' />
+</form>"
+end %>

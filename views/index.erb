@@ -1,0 +1,11 @@
+<p id='github-link'><a href='https://github.com/coped/sinatra-hangman'>Github Repository</a></p>
+<form action='/'>
+    <input type='submit' value='New Word' />
+</form>
+<h1>Welcome To Hangman!</h1>
+<img src=<%= hangman %> />
+<h1><%= word_progress %></h1>
+<form action='/play'>
+    <input type='text' name='guess' size='3' maxlength='1' required='true' />
+    <input type='submit' value='Guess!' />
+</form>
